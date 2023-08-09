@@ -1,5 +1,5 @@
 ---
-title: "Understanding  Function Overload in Typescript"
+title: "Understanding  Function Overload in TypeScript"
 seoTitle: "What is function overload in typescript?"
 seoDescription: "Function Overloads in Typescript allow to define multiple function signatures for the same function. Each signature specifies a particular set of parameters"
 datePublished: Wed Aug 09 2023 17:33:44 GMT+0000 (Coordinated Universal Time)
@@ -43,7 +43,7 @@ function convertToUnit(value: number, convertToString?: boolean) {
 }
 ```
 
-in this, `converToUnit` returns a union type of `string | number`, which loses the intellisense and other TS benefits. To overcome this, we can add the function signature for the functions based on `covertToString` parameter value.
+In the above function, `convertToUnit` returns a union type of `string | number`, which loses the intellisense and other TS benefits. To overcome this, we can add the function signature for the functions based on `convertToString` the parameter value.
 
 ```typescript
 // Will return string if convertToString is true
@@ -58,6 +58,6 @@ function convertToUnit(value: number, covertToString?: boolean) {
 }
 ```
 
-the `convertedStringValue` would have all the intellisense for strings and `convertedNumValue` would have all the intellisense for numbers.
+the `convertedStringValue` would have all the intellisense for strings and `convertedNumValue` all the intellisense for numbers.
 
 [TS Playground](https://www.typescriptlang.org/play?#code/PTAEDEFcDsGMBcCWB7aoDOiDm0CG9IAnAU1ADNlDRcATGxaLUaSAWwCNjD1robQSBQtAZNczNp0IAoMjAQo0tGgApcALgkcuAGlDtNLbYQCUhyVwDc06SAjykqDNjxDSFKrFSx8xV6Ix4QlEeXD4BYiERRmpA4MZZB0VqOjVNdCDRPQM40TNcxmtbMCg4RzREVgAHABtiVj94fGT4AAt8UHa+Op52ZDbQH3RidESy5OU03gBPbM0w6fyF0ABvaVAIqNiAan1rAF8bOwB1RBqazaI0DPimRDJB1AA3LngAFWQAZUyYxB4gyDEMYKJxeaAvQjvZAAVRE8BUT1wNUB5mMejBEKh31umgBxHyN1ERTsAHczhdBFctFJQPdHuDXh9sQE-uQkcNgeV6ZiPrDEPDEcjiKipPkjFIinJxqDnoyYXCEUiUdTdI8eV8flgAPyaPrIOphEyrda0h4qLzq5mMI2U4SgQWAgB08A1txUJmsG1taAdxAONjBGW5r2INCtWAAakrSABeYOQ3kKgCMAAY9HiPcUNtmAHpagOoIMYkM0ABybCjQtAceLCfl-JUqczdmzoDzNmkQA)
